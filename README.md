@@ -7,8 +7,9 @@
 1. [Overview](#1-overview)  
 2. [Analysis Workflow](#2-analysis-workflow)  
 3. [Data Downloads](#3-data-downloads)  
-4. [Citation](#4-citation)  
-5. [Contact](#5-contact)
+4. [Mapping srWGS to the Pangenome Graph and Variant Calling](#4-mapping-srwgs-to-the-pangenome-graph-and-variant-calling)  
+5. [Citation](#5-citation)  
+[Contact](#6-contact)
 ---
 
 ## 1. Overview
@@ -134,9 +135,41 @@ The following dataset files are available via Google Drive.
 | **upload_md5sum.txt** | MD5 checksum file | [Download](https://drive.google.com/file/d/1KhzOZ15xamKJ9ceK356ZBKf0_kMWaZuV/view?usp=drive_link) |
 
 ---
+## 4. Mapping srWGS to the Pangenome Graph and Variant Calling
 
+This section describes how to map short-read whole-genome sequencing data (srWGS) to the KPPD pangenome graph and call variants from graph alignment files.
 
-## 4. Citation
+The workflow consists of three major steps:
+
+1. Build a k-mer index from srWGS reads using **KMC**
+2. Generate a sample-specific haplotype-sampled pangenome graph using **vg haplotypes**
+3. Map srWGS reads to the sampled graph and call variants using **vg giraffe**, **vg pack**, and **vg call**
+
+---
+
+### 4.1 Software Requirements
+
+The following software is required.
+
+| Software | Version used | Purpose | Link |
+|----------|--------------|---------|------|
+| **vg** | v1.74.1 | Graph mapping, haplotype sampling, variant calling | [vg GitHub](https://github.com/vgteam/vg) |
+| **KMC** | v3.2.4 | k-mer counting from srWGS reads | [KMC GitHub](https://github.com/refresh-bio/KMC) |
+
+Example installation:
+
+```bash
+# Download vg
+wget https://github.com/vgteam/vg/releases/download/v1.74.1/vg
+chmod +x vg
+
+# Download KMC
+wget https://github.com/refresh-bio/KMC/releases/download/v3.2.4/KMC3.2.4.linux.x64.tar.gz
+tar -zxvf KMC3.2.4.linux.x64.tar.gz
+
+---
+
+## 5. Citation
 
 If you use KPPD in your research, please cite:
 
