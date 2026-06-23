@@ -140,7 +140,7 @@ This graph represents Korean haplotype diversity integrated on the CHM13 backbon
 
 Short reads were aligned to the pangenome graph using:
 
-- **vg giraffe v1.6.7**
+- **vg giraffe v1.7**
 
 Alignment output:
 
@@ -148,15 +148,14 @@ Alignment output:
 
 A haplotype depth filter was applied using:
 
-- **vg clip v1.6.7**
+- **vg clip v1.6.1**
 
 Filtering thresholds:
 
 | Haplotype source | Depth threshold | Allele frequency threshold |
 |------------------|----------------|----------------------------|
 | HPRC haplotypes | >9× | AF > 0.1 |
-| Korean pangenome haplotypes | >2× | AF > 0.01 |
-| Korean haplotypes | >53× | AF > 0.2 |
+| Korean pangenome haplotypes | >23× | AF > 0.1 |
 
 These filters refine haplotype representation for variant interpretation.
 
