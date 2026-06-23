@@ -102,18 +102,17 @@ This graph represents the merged Korean haplotype diversity on the CHM13 backbon
 
 Short reads were aligned to the pangenome graph using:
 
-- **vg giraffe (v1.6.7)** for haplotype-aware mapping  
+- **vg giraffe (v1.7)** for haplotype-aware mapping  
 - Alignment output: **GAM format**
 
 A haplotype depth filter was applied using:
 
-- **vg clip (1.6.7)**
+- **vg clip (1.6.1)**
 
 Filtering thresholds:
 
 - HPRC haplotypes with >9× depth (AF > 0.1)  
-- Korean pangenome haplotypes with >2× depth (AF > 0.01)  
-- Korean haplotypes with >53× depth (AF > 0.2)
+- Korean pangenome haplotypes with >26× depth (AF > 0.1) 
 
 These filters refine haplotype representation for variant interpretation.
 
